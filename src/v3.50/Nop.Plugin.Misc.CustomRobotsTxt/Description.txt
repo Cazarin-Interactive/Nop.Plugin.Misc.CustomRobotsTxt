@@ -1,0 +1,8 @@
+﻿Group: Misc
+FriendlyName: Custom robots.txt
+SystemName: Misc.CustomRobotsTxt
+Version: 1.00
+SupportedVersions: 3.50
+Author: Cazarin Interactive
+DisplayOrder: 1
+FileName: Nop.Plugin.Misc.CustomRobotsTxt.dll

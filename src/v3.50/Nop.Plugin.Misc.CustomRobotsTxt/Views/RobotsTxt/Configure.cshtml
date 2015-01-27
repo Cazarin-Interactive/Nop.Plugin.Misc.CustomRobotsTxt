@@ -1,0 +1,106 @@
+﻿@{
+    Layout = "";
+}
+
+@using Nop.Plugin.Misc.CustomRobotsTxt.Models
+@using Nop.Web.Framework;
+@model RobotsTxtConfiguration
+@using (Html.BeginForm())
+{
+    <table class="adminContent">
+        <tr>
+            <td colspan="2">
+                @T("Plugins.Misc.CustomRobotsTxt.Description")
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.All):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.All)
+                @Html.ValidationMessageFor(model => model.All)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.Category):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.Category)
+                @Html.ValidationMessageFor(model => model.Category)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.Product):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.Product)
+                @Html.ValidationMessageFor(model => model.Product)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.Manufacturer):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.Manufacturer)
+                @Html.ValidationMessageFor(model => model.Manufacturer)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.Vendor):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.Vendor)
+                @Html.ValidationMessageFor(model => model.Vendor)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.BlogPost):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.BlogPost)
+                @Html.ValidationMessageFor(model => model.BlogPost)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.NewsItem):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.NewsItem)
+                @Html.ValidationMessageFor(model => model.NewsItem)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.Topic):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.Topic)
+                @Html.ValidationMessageFor(model => model.Topic)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" name="save" class="k-button" value="@T("Admin.Common.Save")" />
+            </td>
+        </tr>
+    </table>
+}
+
+<script>
+    $(document).ready(function () {
+        $('#All').click(function () {
+            if ($(this).is(':checked')) {
+                $('input[type="checkbox"]').attr('checked', 'checked');
+            } else {
+                $('input[type="checkbox"]').removeAttr('checked');
+            }
+        })
+    });
+</script>
